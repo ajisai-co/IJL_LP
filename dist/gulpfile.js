@@ -113,10 +113,11 @@ gulp.task("watch", () => {
     browserSync.reload();
     done();
   };
-  gulp.watch("**.html", browserReload);
+  gulp.watch("../**.html", browserReload);
   gulp.watch("ejs/*.ejs", gulp.series("ejs"));
   gulp.watch("ejs/**/*.ejs", gulp.series("ejs"));
   gulp.watch("assets/js/*.js", gulp.series("js"));
+  gulp.watch("assets/js/*.js", browserReload);
   gulp.watch("assets/sass/**/*.scss", gulp.series("sass"));
   gulp.watch("assets/sass/**/*.scss", browserReload);
 });

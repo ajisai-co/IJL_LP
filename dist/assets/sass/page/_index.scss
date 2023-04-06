@@ -4,6 +4,446 @@
 @use "../mixin/clearfix";
 @use "../mixin/csshack";
 
-.p-front {
-    
+.l-common {
+    h1 {
+        font-size: common.calcPc(88);
+        letter-spacing: .02em;
+        line-height: 1.34;
+    }
+    h2 {
+        display: inline-block;
+        font-size: common.calcPc(58);
+        letter-spacing: .04em;
+        font-weight: bold;
+        padding: common.calcPc(18) common.calcPc(62);
+        background: url("../images/bg_head.webp") no-repeat center/contain;
+        margin-bottom: common.calcPc(80);
+    }
+    p {
+        font-size: common.calcPc(34);
+        letter-spacing: .04em;
+        font-weight: 600;
+    }
+    .bg-blue {
+        background: #e6ffff;
+    }
+    .bg-navy {
+        background: #003040;
+    }
+    .red {
+        color: #e60c0c;
+    }
+}
+
+.p-hero {
+    position: relative;
+    &__img {
+        position: absolute;
+        left: 0;
+        top: 0;
+    }
+    &__inner {
+        max-width: common.calcPc(960);
+        margin: 0 auto;
+    }
+    &__txt {
+        background: #fff;
+        max-width: common.calcPc(609);
+        padding: common.calcPc(60);
+        .img {
+            margin-bottom: common.calcPc(24);
+        }
+        p {
+            font-size: common.calcPc(28);
+            letter-spacing: .08em;
+        }
+    }
+}
+
+.p-feature {
+    padding: common.calcPc(78) 0 0;
+    &__inner {
+        padding: 0 common.calcPc(150);
+    }
+    &__head {
+        text-align: center;
+    }
+    &__lead {
+        font-size: common.calcPc(34);
+        letter-spacing: .04em;
+        line-height: 1.7;
+        margin-bottom: common.calcPc(80);
+        text-align: center;
+        font-weight: 600;
+        span {
+            font-size: common.calcPc(28);
+            line-height: 1.78;
+        }
+    }
+    &__box {
+        &__head {
+            color: #ffff00;
+            font-weight: bold;
+            font-size: common.calcPc(42);
+            letter-spacing: .04em;
+            padding: common.calcPc(18) 0;
+            text-align: center;
+        }
+        &__list {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            padding: common.calcPc(100);
+            li {
+                text-align: center;
+                &:nth-child(1) {
+                    img {
+                        width: common.calcPc(227);
+                        margin-bottom: common.calcPc(46);
+                    }
+                }
+                &:nth-child(2) {
+                    img {
+                        width: common.calcPc(217);
+                        margin-bottom: common.calcPc(64);
+                    }
+                }
+                &:nth-child(3) {
+                    img {
+                        width: common.calcPc(293);
+                        margin-bottom: common.calcPc(48);
+                    }
+                }
+            }
+            h3 {
+                font-size: common.calcPc(42);
+                font-weight: bold;
+                letter-spacing: .04em;
+                line-height: 1.47;
+                position: relative;
+                &::after {
+                    content: "";
+                    height: common.calcPc(14);
+                    width: 100%;
+                    background: #ffff00;
+                    position: absolute;
+                    left: 0;
+                    top: common.calcPc(40);
+                    z-index: -1;
+                }
+            }
+        }
+        p {
+            text-align: center;
+            &:nth-child(3) {
+                color: #e60c0c;
+                font-size: common.calcPc(46);
+                font-weight: bold;
+                margin-bottom: common.calcPc(12);
+                letter-spacing: .04em;
+            }
+            &:nth-child(4) {
+                color: #003040;
+                font-size: common.calcPc(34);
+                font-weight: bold;
+                letter-spacing: .04em;
+            }
+        }
+    }
+    &__column {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        margin: calc(common.calcPc(16) * -1) 0;
+        &__img {
+            width: common.calcPc(547);
+            height: common.calcPc(547);
+        }
+        &__txt {
+            h3 {
+                font-size: common.calcPc(58);
+                letter-spacing: .04em;
+                font-weight: bold;
+                line-height: 1.5;
+                margin-bottom: common.calcPc(20);
+            }
+            p {
+                font-size: common.calcPc(34);
+                letter-spacing: .04em;
+                font-weight: 600;
+                line-height: 1.7;
+            }
+        }
+    }
+    &__footer {
+        &__inner {
+            position: relative;
+            max-width: common.calcPc(1619);
+            margin: 0 auto;
+        }
+        &__main {
+            position: relative;
+            padding: common.calcPc(72) 0;
+            .red {
+                font-size: common.calcPc(58);
+                display: inline-block;
+                padding: common.calcPc(8) common.calcPc(8) common.calcPc(8) 0;
+            }
+        }
+        &__sub {
+            position: absolute;
+            right: 0;
+            top: 0;
+            width: common.calcPc(601);
+            height: auto;
+        }
+        &__txt {
+            position: relative;
+            color: #fff;
+            text-align: center;
+            font-size: common.calcPc(42);
+            padding: common.calcPc(20) 0;
+        }
+    }
+}
+
+.p-flow {
+    padding: common.calcPc(80) 0 common.calcPc(140);
+    &__head {
+        text-align: center;
+    }
+    &__column {
+        max-width: common.calcPc(1619);
+        margin: 0 auto;
+        display: flex;
+        & + & {
+            margin-top: common.calcPc(12);
+        }
+        .head {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: common.calcPc(167);
+            height: common.calcPc(167);
+            .en {
+                color: #fff;
+                font-size: common.calcPc(42);
+                line-height: 1;
+            }
+            .num {
+                color: #fff;
+                font-size: common.calcPc(86);
+                letter-spacing: .06em;
+                line-height: 1;
+            }
+        }
+        .body {
+            padding: common.calcPc(30) common.calcPc(16) common.calcPc(30) common.calcPc(40);
+            width: calc(100% - common.calcPc(167));
+            h3 {
+                font-weight: bold;
+                margin-bottom: common.calcPc(16);
+                font-size: common.calcPc(42);
+                letter-spacing: .04em;
+            }
+        }
+        p {
+            font-size: common.calcPc(27);
+        }
+        & + .p-flow__btn {
+            margin-top: common.calcPc(100);
+        }
+    }
+    &__btn {
+        max-width: common.calcPc(1122);
+        margin: 0 auto;
+    }
+}
+
+.p-service {
+    text-align: center;
+    &__column {
+        max-width: common.calcPc(1620);
+        margin: 0 auto;
+        & + & {
+            margin-top: common.calcPc(40);
+        }
+        & + .p-service__btn {
+            margin-top: common.calcPc(100);
+        }
+    }
+    &__btn {
+        max-width: common.calcPc(1122);
+        margin: 0 auto;
+    }
+}
+
+.p-works {
+    padding: common.calcPc(140) 0 0;
+    &__head {
+        text-align: center;
+    }
+    &__youtube {
+        max-width: common.calcPc(1620);
+        margin: 0 auto;
+        &__head {
+            text-align: center;
+            color: #003040;
+            font-weight: bold;
+            font-size: common.calcPc(42);
+            letter-spacing: .04em;
+            padding: common.calcPc(32) 0;
+        }
+        &__body {
+            padding: common.calcPc(98) 0;
+        }
+        &__list {
+            max-width: common.calcPc(1177);
+            margin: calc(common.calcPc(88) * -1) auto 0;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            li {
+                max-width: common.calcPc(538);
+                text-align: center;
+                margin-top: common.calcPc(88);
+            }
+            .thumb {
+                margin-bottom: common.calcPc(24);
+            }
+            h3 {
+                color: #fff;
+                font-size: common.calcPc(28);
+                letter-spacing: .04em;
+                font-weight: 600;
+                padding-bottom: common.calcPc(20);
+                margin-bottom: common.calcPc(20);
+                border-bottom: 1px solid #fff;
+            }
+            p {
+                color: #fff;
+                font-size: common.calcPc(21);
+            }
+        }
+    }
+    &__label {
+        text-align: center;
+        margin-bottom: common.calcPc(72);
+        p {
+            display: inline-block;
+            color: #fff;
+            background: url("../images/bg_label.webp") no-repeat center/contain;
+        }
+    }
+    &__tv {
+        max-width: common.calcPc(1620);
+        margin: 0 auto;
+        padding: common.calcPc(100) 0;
+        &__list {
+            max-width: common.calcPc(1177);
+            margin: 0 auto common.calcPc(60);
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;    
+            h3 {
+                font-weight: 600;
+                font-size: common.calcPc(28);
+                letter-spacing: .04em;
+                & + p {
+                    margin-top: common.calcPc(8);
+                }
+            }
+            p {
+                font-size: common.calcPc(21);
+                letter-spacing: .04em;
+                line-height: 2;
+                & + h3 {
+                    margin-top: common.calcPc(32);
+                }
+            }
+        }
+        &__img {
+            max-width: common.calcPc(1177);
+            margin: 0 auto;
+        }
+    }
+}
+
+.p-price {
+    padding: common.calcPc(150) 0 common.calcPc(132);
+    &__head {
+        text-align: center;
+    }
+    &__box {
+        max-width: common.calcPc(1620);
+        margin: 0 auto;
+        &__head {
+            color: #ffff00;
+            font-weight: bold;
+            font-size: common.calcPc(42);
+            letter-spacing: .04em;
+            padding: common.calcPc(18) 0;
+            text-align: center;
+            span {
+                color: #ffff00;
+                font-size: common.calcPc(34);
+            }
+        }
+        &__body {
+            padding: common.calcPc(100) common.calcPc(150);
+        }
+    }
+    &__list {
+        border-top: 1.7px solid #003040;
+        margin-bottom: common.calcPc(72);
+        li {
+            display: flex;
+            align-items: center;
+            border-bottom: 1.7px solid #003040;
+        }
+        .head {
+            padding: common.calcPc(20) common.calcPc(32);
+            font-size: common.calcPc(58);
+            border-right: 1.7px solid #003040;
+        }
+        .body {
+            color: #003040;
+            font-size: common.calcPc(38);
+            font-weight: bold;
+            letter-spacing: .04em;
+            padding: common.calcPc(18) common.calcPc(20) common.calcPc(18) common.calcPc(58);
+        }
+        & + .p-price__btn {
+            margin-top: common.calcPc(100);
+        }
+    }
+    &__column {
+        display: flex;
+        align-items: center;
+        .head {
+            color: #ffff00;
+            font-weight: bold;
+            font-size: common.calcPc(34);
+            letter-spacing: .04em;
+            padding: common.calcPc(16) common.calcPc(20);
+            text-align: center;
+        }
+        .body {
+            width: calc(100% - common.calcPc(360));
+            font-size: common.calcPc(34);
+            letter-spacing: .04em;
+            font-weight: bold;
+            padding: common.calcPc(16) common.calcPc(20);
+            span {
+                font-size: common.calcPc(21);
+                letter-spacing: .04em;
+                margin-left: common.calcPc(32);
+            }
+        }
+    }
+    &__btn {
+        max-width: common.calcPc(1122);
+        margin: 0 auto;
+    }
 }

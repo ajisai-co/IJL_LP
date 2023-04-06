@@ -3,3 +3,18 @@
 @use "../layout/common";
 @use "../mixin/clearfix";
 @use "../mixin/csshack";
+
+.l-footer {
+    padding-bottom: common.calcPc(40);
+    &__logo {
+        width: common.calcPc(642);
+        margin: 0 auto common.calcPc(80);
+    }
+    &__copyright {
+        display: block;
+        text-align: center;
+        font-size: common.calcPc(15);
+        letter-spacing: .02em;
+        font-weight: bold;
+    }
+}
