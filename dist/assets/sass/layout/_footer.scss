@@ -6,9 +6,16 @@
 
 .l-footer {
     padding-bottom: common.calcPc(40);
+    @include mediaquery.sp {
+        padding-bottom: common.calcResp(24);
+    }
     &__logo {
         width: common.calcPc(642);
         margin: 0 auto common.calcPc(80);
+        @include mediaquery.sp {
+            margin-bottom: common.calcResp(24);
+            width: 60%;
+        }
     }
     &__copyright {
         display: block;
@@ -16,5 +23,8 @@
         font-size: common.calcPc(15);
         letter-spacing: .02em;
         font-weight: bold;
+        @include mediaquery.sp {
+            font-size: common.calcResp(10);
+        }
     }
 }

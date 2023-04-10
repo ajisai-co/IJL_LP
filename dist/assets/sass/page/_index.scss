@@ -20,6 +20,10 @@
         margin-bottom: common.calcPc(80);
         position: relative;
         color: #003358;
+        @include mediaquery.sp {
+            font-size: common.calcResp(22);
+            margin-bottom: common.calcResp(32);
+        }
         &::before {
             content: "";
             position: absolute;
@@ -28,6 +32,9 @@
             width: 39px;
             height: 100%;
             background: url("../images/bg_head_left.svg") no-repeat center/contain;
+            @include mediaquery.sp {
+                left: common.calcResp(-20);
+            }
         }
         &::after {
             content: "";
@@ -37,6 +44,9 @@
             width: 39px;
             height: 100%;
             background: url("../images/bg_head_right.svg") no-repeat center/contain;
+            @include mediaquery.sp {
+                right: common.calcResp(-20);
+            }
         }
     }
     p {
@@ -66,6 +76,9 @@
         max-width: common.calcPc(1613);
         margin: 0 auto;
         padding: common.calcPc(100) 0;
+        @include mediaquery.sp {
+            max-width: calc(100% - common.calcResp(40));
+        }
     }
     &__txt {
         position: relative;
@@ -80,14 +93,23 @@
         p {
             font-size: common.calcPc(28);
             letter-spacing: .08em;
+            @include margine.sp {
+                font-size: common.calcResp(16);
+            }
         }
     }
 }
 
 .p-feature {
     padding: common.calcPc(78) 0 0;
+    @include mediaquery.sp {
+        padding-top: common.calcResp(32);
+    }
     &__inner {
         padding: 0 common.calcPc(150);
+        @include mediaquery.sp {
+            padding: 0 common.calcResp(20);
+        }
     }
     &__head {
         text-align: center;
@@ -99,9 +121,16 @@
         margin-bottom: common.calcPc(80);
         text-align: center;
         font-weight: 600;
+        @include mediaquery.sp {
+            font-size: common.calcResp(16);
+            margin-bottom: common.calcResp(40);
+        }
         span {
             font-size: common.calcPc(28);
             line-height: 1.78;
+            @include mediaquery.sp {
+                font-size: common.calcResp(12);
+            }
         }
     }
     &__box {
@@ -114,6 +143,10 @@
             letter-spacing: .04em;
             padding: common.calcPc(18) 0;
             text-align: center;
+            @include mediaquery.sp {
+                font-size: common.calcResp(16);
+                padding: common.calcResp(10) 0;
+            }
         }
         &__list {
             display: flex;
@@ -147,6 +180,9 @@
                 letter-spacing: .04em;
                 line-height: 1.47;
                 position: relative;
+                @include mediaquery.sp {
+                    font-size: common.calcResp(10);
+                }
                 &::after {
                     content: "";
                     height: common.calcPc(14);
@@ -156,6 +192,9 @@
                     left: 0;
                     top: common.calcPc(40);
                     z-index: -1;
+                    @include mediaquery.sp {
+                        top: common.calcResp(10);
+                    }
                 }
             }
         }
@@ -167,12 +206,18 @@
                 font-weight: bold;
                 margin-bottom: common.calcPc(12);
                 letter-spacing: .04em;
+                @include mediaquery.sp {
+                    font-size: common.calcResp(11);
+                }
             }
             &:nth-child(4) {
                 color: #003040;
                 font-size: common.calcPc(34);
                 font-weight: bold;
                 letter-spacing: .04em;
+                @include mediaquery.sp {
+                    font-size: common.calcResp(10);
+                }
             }
         }
     }
@@ -192,12 +237,18 @@
                 font-weight: bold;
                 line-height: 1.5;
                 margin-bottom: common.calcPc(20);
+                @include mediaquery.sp {
+                    font-size: common.calcResp(18);
+                }
             }
             p {
                 font-size: common.calcPc(34);
                 letter-spacing: .04em;
                 font-weight: 600;
                 line-height: 1.7;
+                @include mediaquery.sp {
+                    font-size: common.calcResp(7);
+                }
             }
         }
     }
@@ -206,14 +257,24 @@
             position: relative;
             max-width: common.calcPc(1619);
             margin: 0 auto;
+            @include mediaquery.sp {
+                max-width: 100%;
+                width: calc(100% - common.calcResp(40));
+            }
         }
         &__main {
             position: relative;
             padding: common.calcPc(72) 0;
+            @include mediaquery.sp {
+                padding: common.calcResp(16) 0;
+            }
             .red {
                 font-size: common.calcPc(58);
                 display: inline-block;
                 padding: common.calcPc(8) common.calcPc(8) common.calcPc(8) 0;
+                @include mediaquery.sp {
+                    font-size: common.calcResp(14);
+                }
             }
         }
         &__sub {
@@ -235,6 +296,9 @@
 
 .p-flow {
     padding: common.calcPc(80) 0 common.calcPc(140);
+    @include mediaquery.sp {
+        padding: common.calcResp(80) common.calcResp(20) 0;
+    }
     &__head {
         text-align: center;
     }
@@ -242,8 +306,14 @@
         max-width: common.calcPc(1619);
         margin: 0 auto;
         display: flex;
+        @include mediaquery.sp {
+            max-width: 100%;
+        }
         & + & {
             margin-top: common.calcPc(12);
+            @include mediaquery.sp {
+                margin-top: common.calcResp(10);
+            }
         }
         .head {
             display: flex;
@@ -252,46 +322,78 @@
             justify-content: center;
             width: common.calcPc(167);
             height: common.calcPc(167);
+            @include mediaquery.sp {
+                width: common.calcResp(160);
+                height: 100%;
+            }
             .en {
                 color: #fff;
                 font-size: common.calcPc(42);
                 line-height: 1;
+                @include mediaquery.sp {
+                    font-size: common.calcResp(10);
+                }
             }
             .num {
                 color: #fff;
                 font-size: common.calcPc(86);
                 letter-spacing: .06em;
                 line-height: 1;
+                @include mediaquery.sp {
+                    font-size: common.calcResp(24);
+                }
             }
         }
         .body {
             padding: common.calcPc(30) common.calcPc(16) common.calcPc(30) common.calcPc(40);
             width: calc(100% - common.calcPc(167));
+            @include mediaquery.sp {
+                width: 100%;
+                padding: common.calcResp(10);
+            }
             h3 {
                 font-weight: bold;
                 margin-bottom: common.calcPc(16);
                 font-size: common.calcPc(42);
                 letter-spacing: .04em;
+                @include mediaquery.sp {
+                    font-size: common.calcResp(16);
+                }
             }
         }
         p {
             font-size: common.calcPc(27);
+            @include mediaquery.sp {
+                font-size: common.calcResp(12);
+            }
         }
         & + .p-flow__btn {
             margin-top: common.calcPc(100);
+            @include mediaquery.sp {
+                margin-top: common.calcResp(24);
+            }
         }
     }
     &__btn {
         max-width: common.calcPc(1122);
         margin: 0 auto;
+        @include mediaquery.sp {
+            max-width: 80%;
+        }
     }
 }
 
 .p-service {
     text-align: center;
+    @include mediaquery.sp {
+        padding-top: common.calcResp(80);
+    }
     &__column {
         max-width: common.calcPc(1620);
         margin: 0 auto;
+        @include mediaquery.sp {
+            max-width: calc(100% - common.calcResp(40));
+        }
         & + & {
             margin-top: common.calcPc(40);
         }
@@ -302,17 +404,26 @@
     &__btn {
         max-width: common.calcPc(1122);
         margin: 0 auto;
+        @include mediaquery.sp {
+            max-width: 80%;
+        }
     }
 }
 
 .p-works {
     padding: common.calcPc(140) 0 0;
+    @include mediaquery.sp {
+        padding: common.calcResp(80) 0 0;
+    }
     &__head {
         text-align: center;
     }
     &__youtube {
         max-width: common.calcPc(1620);
         margin: 0 auto;
+        @include mediaquery.sp {
+            max-width: calc(100% - common.calcResp(40));
+        }
         &__head {
             text-align: center;
             color: #003040;
@@ -320,6 +431,10 @@
             font-size: common.calcPc(42);
             letter-spacing: .04em;
             padding: common.calcPc(32) 0;
+            @include mediaquery.sp {
+                font-size: common.calcResp(16);
+                padding: common.calcResp(10);
+            }
         }
         &__body {
             padding: common.calcPc(98) 0;
@@ -329,9 +444,16 @@
             margin-bottom: common.calcPc(72);
             background: url("../images/bg_label_youtube.webp") no-repeat center/contain;
             padding: common.calcPc(16) 0;
+            @include mediaquery.sp {
+                margin-bottom: common.calcResp(40);
+                padding: common.calcResp(12) 0;
+            }
             p {
                 display: inline-block;
                 color: #fff;
+                @include mediaquery.sp {
+                    font-size: common.calcResp(16);
+                }
             }
         }
         &__list {
@@ -340,10 +462,16 @@
             display: flex;
             flex-wrap: wrap;
             justify-content: space-between;
+            @include mediaquery.sp {
+                max-width: calc(100% - common.calcResp(40));
+            }
             li {
                 max-width: common.calcPc(538);
                 text-align: center;
                 margin-top: common.calcPc(88);
+                @include mediaquery.sp {
+                    max-width: 48%;
+                }
             }
             .thumb {
                 margin-bottom: common.calcPc(24);
@@ -356,10 +484,16 @@
                 padding-bottom: common.calcPc(20);
                 margin-bottom: common.calcPc(20);
                 border-bottom: 1px solid #fff;
+                @include mediaquery.sp {
+                    font-size: common.calcResp(16);
+                }
             }
             p {
                 color: #fff;
                 font-size: common.calcPc(21);
+                @include mediaquery.sp {
+                    font-size: common.calcResp(10);
+                }
             }
         }
     }
@@ -367,14 +501,24 @@
         max-width: common.calcPc(1620);
         margin: 0 auto;
         padding: common.calcPc(100) 0;
+        @include mediaquery.sp {
+            max-width: calc(100% - common.calcResp(40));
+        }
         &__label {
             text-align: center;
             margin-bottom: common.calcPc(72);
             background: url("../images/bg_label.webp") no-repeat center/contain;
             padding: common.calcPc(16) 0;
+            @include mediaquery.sp {
+                margin-bottom: common.calcResp(40);
+                padding: common.calcResp(12) 0;
+            }
             p {
                 display: inline-block;
                 color: #003358;
+                @include mediaquery.sp {
+                    font-size: common.calcResp(16);
+                }
             }
         }
         &__list {
@@ -382,12 +526,25 @@
             margin: 0 auto common.calcPc(60);
             display: flex;
             justify-content: space-between;
-            align-items: flex-start;    
+            align-items: flex-start;
+            @include mediaquery.sp {
+                display: block;
+                max-width: calc(100% - common.calcResp(40));
+                margin-bottom: common.calcResp(40);
+            }
+            li + li {
+                @include mediaquery.sp {
+                    margin-top: common.calcResp(24);
+                }
+            }
             h3 {
                 font-weight: 600;
                 font-size: common.calcPc(28);
                 letter-spacing: .04em;
                 color: #003358;
+                @include mediaquery.sp {
+                    font-size: common.calcResp(16);
+                }
                 & + p {
                     margin-top: common.calcPc(8);
                 }
@@ -397,6 +554,9 @@
                 letter-spacing: .04em;
                 line-height: 2;
                 color: #003358;
+                @include mediaquery.sp {
+                    font-size: common.calcResp(12);
+                }
                 & + h3 {
                     margin-top: common.calcPc(32);
                 }
@@ -405,18 +565,28 @@
         &__img {
             max-width: common.calcPc(1177);
             margin: 0 auto;
+            @include mediaquery.sp {
+                max-width: calc(100% - common.calcResp(40));
+            }
         }
     }
 }
 
 .p-price {
     padding: common.calcPc(150) 0 common.calcPc(132);
+    @include mediaquery.sp {
+        padding: common.calcResp(80) 0;
+    }
     &__head {
         text-align: center;
     }
     &__box {
+        box-shadow: 1px 2px 6px 6px rgba(0, 0, 0, 0.1);
         max-width: common.calcPc(1620);
         margin: 0 auto;
+        @include mediaquery.sp {
+            max-width: calc(100% - common.calcResp(40));
+        }
         &__head {
             color: #ffff00;
             font-weight: bold;
@@ -424,6 +594,10 @@
             letter-spacing: .04em;
             padding: common.calcPc(18) 0;
             text-align: center;
+            @include mediaquery.sp {
+                font-size: common.calcResp(18);
+                padding: common.calcResp(10) 0;
+            }
             span {
                 color: #ffff00;
                 font-size: common.calcPc(34);
@@ -431,11 +605,23 @@
         }
         &__body {
             padding: common.calcPc(100) common.calcPc(150);
+            @include mediaquery.sp {
+                padding: common.calcResp(32) common.calcResp(20);
+            }
+        }
+        & + .p-price__btn {
+            margin-top: common.calcPc(100);
+            @include mediaquery.sp {
+                margin-top: common.calcResp(40);
+            }
         }
     }
     &__list {
         border-top: 1.7px solid #003040;
         margin-bottom: common.calcPc(72);
+        @include mediaquery.sp {
+            margin-bottom: common.calcResp(24);
+        }
         li {
             display: flex;
             align-items: center;
@@ -444,7 +630,9 @@
         .head {
             padding: common.calcPc(20) common.calcPc(32);
             font-size: common.calcPc(58);
-            border-right: 1.7px solid #003040;
+            @include mediaquery.sp {
+                font-size: common.calcResp(16);
+            }
         }
         .body {
             color: #003040;
@@ -452,14 +640,20 @@
             font-weight: bold;
             letter-spacing: .04em;
             padding: common.calcPc(18) common.calcPc(20) common.calcPc(18) common.calcPc(58);
+            border-left: 1.7px solid #003040;
+            @include mediaquery.sp {
+                font-size: common.calcResp(12);
+                padding: common.calcResp(10);
+            }
         }
-        & + .p-price__btn {
-            margin-top: common.calcPc(100);
-        }
+
     }
     &__column {
         display: flex;
         align-items: center;
+        @include mediaquery.sp {
+            display: block;
+        }
         .head {
             color: #ffff00;
             font-weight: bold;
@@ -467,6 +661,9 @@
             letter-spacing: .04em;
             padding: common.calcPc(16) common.calcPc(20);
             text-align: center;
+            @include mediaquery.sp {
+                font-size: common.calcResp(14);
+            }
         }
         .body {
             width: calc(100% - common.calcPc(360));
@@ -474,15 +671,25 @@
             letter-spacing: .04em;
             font-weight: bold;
             padding: common.calcPc(16) common.calcPc(20);
+            @include mediaquery.sp {
+                font-size: common.calcResp(12);
+                width: 100%;
+            }
             span {
                 font-size: common.calcPc(21);
                 letter-spacing: .04em;
                 margin-left: common.calcPc(32);
+                @include mediaquery.sp {
+                    font-size: common.calcResp(10);
+                }
             }
         }
     }
     &__btn {
         max-width: common.calcPc(1122);
         margin: 0 auto;
+        @include mediaquery.sp {
+            max-width: 80%;
+        }
     }
 }
