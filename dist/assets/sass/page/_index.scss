@@ -9,6 +9,7 @@
         font-size: common.calcPc(88);
         letter-spacing: .02em;
         line-height: 1.34;
+        font-weight: bold;
     }
     h2 {
         display: inline-block;
@@ -16,8 +17,27 @@
         letter-spacing: .04em;
         font-weight: bold;
         padding: common.calcPc(18) common.calcPc(62);
-        background: url("../images/bg_head.webp") no-repeat center/contain;
         margin-bottom: common.calcPc(80);
+        position: relative;
+        color: #003358;
+        &::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 39px;
+            height: 100%;
+            background: url("../images/bg_head_left.svg") no-repeat center/contain;
+        }
+        &::after {
+            content: "";
+            position: absolute;
+            right: 0;
+            top: 0;
+            width: 39px;
+            height: 100%;
+            background: url("../images/bg_head_right.svg") no-repeat center/contain;
+        }
     }
     p {
         font-size: common.calcPc(34);
@@ -43,14 +63,18 @@
         top: 0;
     }
     &__inner {
-        max-width: common.calcPc(960);
+        max-width: common.calcPc(1613);
         margin: 0 auto;
+        padding: common.calcPc(100) 0;
     }
     &__txt {
-        background: #fff;
-        max-width: common.calcPc(609);
-        padding: common.calcPc(60);
+        position: relative;
+        background: rgba(255, 255, 255, .7);
+        max-width: common.calcPc(1000);
+        padding: common.calcPc(60) 0 common.calcPc(60) common.calcPc(60);
+        z-index: 10;
         .img {
+            width: common.calcPc(642);
             margin-bottom: common.calcPc(24);
         }
         p {
@@ -81,6 +105,8 @@
         }
     }
     &__box {
+        box-shadow: 1px 2px 6px 6px rgba(0, 0, 0, 0.1);
+        padding-bottom: common.calcPc(100);
         &__head {
             color: #ffff00;
             font-weight: bold;
@@ -154,7 +180,7 @@
         display: flex;
         justify-content: flex-start;
         align-items: center;
-        margin: calc(common.calcPc(16) * -1) 0;
+        margin: calc(common.calcPc(64) * -1) 0;
         &__img {
             width: common.calcPc(547);
             height: common.calcPc(547);
@@ -298,6 +324,16 @@
         &__body {
             padding: common.calcPc(98) 0;
         }
+        &__label {
+            text-align: center;
+            margin-bottom: common.calcPc(72);
+            background: url("../images/bg_label_youtube.webp") no-repeat center/contain;
+            padding: common.calcPc(16) 0;
+            p {
+                display: inline-block;
+                color: #fff;
+            }
+        }
         &__list {
             max-width: common.calcPc(1177);
             margin: calc(common.calcPc(88) * -1) auto 0;
@@ -327,19 +363,20 @@
             }
         }
     }
-    &__label {
-        text-align: center;
-        margin-bottom: common.calcPc(72);
-        p {
-            display: inline-block;
-            color: #fff;
-            background: url("../images/bg_label.webp") no-repeat center/contain;
-        }
-    }
     &__tv {
         max-width: common.calcPc(1620);
         margin: 0 auto;
         padding: common.calcPc(100) 0;
+        &__label {
+            text-align: center;
+            margin-bottom: common.calcPc(72);
+            background: url("../images/bg_label.webp") no-repeat center/contain;
+            padding: common.calcPc(16) 0;
+            p {
+                display: inline-block;
+                color: #003358;
+            }
+        }
         &__list {
             max-width: common.calcPc(1177);
             margin: 0 auto common.calcPc(60);
@@ -350,6 +387,7 @@
                 font-weight: 600;
                 font-size: common.calcPc(28);
                 letter-spacing: .04em;
+                color: #003358;
                 & + p {
                     margin-top: common.calcPc(8);
                 }
@@ -358,6 +396,7 @@
                 font-size: common.calcPc(21);
                 letter-spacing: .04em;
                 line-height: 2;
+                color: #003358;
                 & + h3 {
                     margin-top: common.calcPc(32);
                 }

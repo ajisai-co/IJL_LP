@@ -7,7 +7,7 @@
 html {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  @include fonts.base-font;
+  @include fonts.Noto-Sans;
   font-size: setting.$baseFont;
 }
 html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -22,7 +22,7 @@ time, mark, audio, video {
   outline: 0;
   vertical-align: baseline;
   color: setting.$textColor;
-  @include fonts.base-font;
+  @include fonts.Noto-Sans;
 }
 
 a{
@@ -30,7 +30,7 @@ a{
   outline:none;
 	text-decoration:none;
 	transition: .5s;
-  @include fonts.base-font;
+  @include fonts.Noto-Sans;
 }
 
 main{
@@ -94,7 +94,7 @@ select {
   appearance: none;
   border: none;
   color: setting.$textColor;
-  @include fonts.base-font;
+  @include fonts.Noto-Sans;
   &:hover{
     cursor: pointer;
   }
@@ -105,7 +105,7 @@ textarea,
 button {
   margin: 0;
   padding: 0;
-  @include fonts.base-font;
+  @include fonts.Noto-Sans;
 }
 
 *,
