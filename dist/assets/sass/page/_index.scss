@@ -326,26 +326,26 @@
             width: common.calcPc(167);
             height: common.calcPc(167);
             @include mediaquery.sp {
-                width: common.calcResp(160);
+                width: common.calcResp(110);
                 height: 100%;
             }
-            .en {
-                color: #fff;
-                font-size: common.calcPc(42);
-                line-height: 1;
-                @include mediaquery.sp {
-                    font-size: common.calcResp(10);
-                }
-            }
-            .num {
-                color: #fff;
-                font-size: common.calcPc(86);
-                letter-spacing: .06em;
-                line-height: 1;
-                @include mediaquery.sp {
-                    font-size: common.calcResp(24);
-                }
-            }
+            // .en {
+            //     color: #fff;
+            //     font-size: common.calcPc(42);
+            //     line-height: 1;
+            //     @include mediaquery.sp {
+            //         font-size: common.calcResp(10);
+            //     }
+            // }
+            // .num {
+            //     color: #fff;
+            //     font-size: common.calcPc(86);
+            //     letter-spacing: .06em;
+            //     line-height: 1;
+            //     @include mediaquery.sp {
+            //         font-size: common.calcResp(24);
+            //     }
+            // }
         }
         .body {
             padding: common.calcPc(30) common.calcPc(16) common.calcPc(30) common.calcPc(40);
@@ -360,14 +360,14 @@
                 font-size: common.calcPc(42);
                 letter-spacing: .04em;
                 @include mediaquery.sp {
-                    font-size: common.calcResp(16);
+                    font-size: common.calcResp(14);
                 }
             }
         }
         p {
             font-size: common.calcPc(27);
             @include mediaquery.sp {
-                font-size: common.calcResp(12);
+                font-size: common.calcResp(10);
             }
         }
         & + .p-flow__btn {
